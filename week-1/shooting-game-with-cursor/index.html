@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>3D Arena Duel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="page-root">
+      <header class="top-bar">
+        <h1 class="title">3D Arena Duel</h1>
+        <p class="subtitle">Arrow keys to move • Space bar to shoot</p>
+      </header>
+
+      <main class="game-layout">
+        <div id="game-container">
+          <!-- Three.js renderer will attach a canvas here -->
+        </div>
+
+        <section class="hud">
+          <div class="hud-row">
+            <div class="hud-item">
+              <span class="label">Player HP:</span>
+              <span id="player-health" class="value">3</span>
+            </div>
+            <div class="hud-item">
+              <span class="label">Enemy HP:</span>
+              <span id="enemy-health" class="value">3</span>
+            </div>
+          </div>
+
+          <div id="status-message" class="status-message">Press Enter to start</div>
+
+          <div class="controls-hint">
+            <span>↑ ↓: Move • ← →: Turn • Space: Shoot • R: Restart</span>
+          </div>
+        </section>
+      </main>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+          <h2 id="overlay-title">3D Arena Duel</h2>
+          <p id="overlay-body">
+            Defeat the enemy in this 1v1 arena duel. Use arrow keys to move and
+            space bar to shoot.
+          </p>
+          <button id="overlay-button" type="button">Press Enter to start</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+  </html>
+
